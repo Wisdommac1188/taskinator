@@ -8,6 +8,13 @@ let taskFormHandler = function(event) {
    
     listItemsEl = document.createElement("li");
     listItemsEl.className = "task-item";
+    if (!taskNameInput || !taskTypeInput) {
+        alert("You need to fill out the task form!")
+        return false;
+    }
+
+    formEl.reset();
+
     
     let taskDataObj = {
         name:taskNameInput,
